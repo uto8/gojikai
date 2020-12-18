@@ -1,0 +1,152 @@
+@import "compass/css3";
+
+@import url(https://fonts.googleapis.com/css?family=Varela+Round);
+
+html, body {
+  height: 100%;
+  padding: 0;
+  margin: 0;
+
+}
+body {
+  font-family: "Varela Round";
+  background: #444444;
+}
+#header {
+  background: url(https://www.ozmall.co.jp/Content/upload/images/fb7450d620424faeae29c68ad4d0f302.jpg) no-repeat center;
+  background-size: cover;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  top: 0;
+}
+  .center {
+    background: rgba(0,0,0,0.25);
+
+    position: absolute;
+    color: #FFFFFF;
+    color: #F5F7FA;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    top: 0;
+    width:600px;
+  }
+
+    .middle {
+      position: absolute;
+      margin-top: -6em;
+      right: 0;
+      left: 0;
+      top: 50%;
+      text-align:center;
+
+    }
+      h1 {
+        font-weight: normal;
+        line-height: 1em;
+        font-size: 20px;
+        margin: 0 0 0 50px;
+        padding-bottom: 20px;
+      }
+      span {
+        line-height: 1em;
+        font-size: 5px;
+
+      }
+
+
+
+
+$pageTopDecrease: 20px;
+$hrBorderColor: #F5F7FA;
+$hrBorderSize: 5px;
+$hrColor: #48CFAD;
+$hrSize: 20px;
+
+#pageHr, #pageHrBorder {
+  position: absolute;
+  border-bottom: ($hrBorderSize+$pageTopDecrease) solid $hrColor;
+  margin-top: -($pageTopDecrease + $hrSize);
+  height: $hrSize;
+  display: block;
+  right: 0px;
+  left: 0px;
+  top: 100%;
+
+  .a:before,
+  .a:after {
+    border-color: $hrColor transparent;
+    border-style: solid;
+    position: absolute;
+    display: block;
+    content: "";
+  }
+  .a:before {
+    border-width: 0 $hrSize $hrSize 0;
+    margin-left: $hrSize/2;
+    right: 50%;
+  }
+  .a:after {
+    border-width: 0 0 $hrSize $hrSize;
+    margin-right: $hrSize/2;
+    left: 50%;
+  }
+  .s:before,
+  .s:after {
+    background: $hrColor;
+    position: absolute;
+    display: block;
+    content: "";
+    right: 0;
+    left: 0;
+  }
+  .s:before {
+    margin-right: $hrSize;
+    height: $hrSize;
+    right: 50%;
+  }
+  .s:after {
+    margin-left: $hrSize;
+    height: $hrSize;
+    left: 50%;
+  }
+}
+
+#pageHrBorder {
+  border-bottom-color: $hrBorderColor;
+  margin-top: -($pageTopDecrease + $hrSize + $hrBorderSize);
+
+  .a:before,
+  .a:after {
+    border-color: $hrBorderColor transparent;
+  }
+  .a:before {
+    margin-right: -($hrBorderSize/2);
+  }
+  .a:after {
+    margin-left: -($hrBorderSize/2);
+  }
+
+  .s:before,
+  .s:after {
+    background: $hrBorderColor;
+  }
+  .s:before {
+    margin-right: $hrSize - ($hrBorderSize/1.9);
+  }
+  .s:after {
+    margin-left: $hrSize - ($hrBorderSize/1.9);
+  }
+}
+
+#page {
+  //border-top: $pageTopDecrease solid $hrColor;
+  background-image: url(https://www.littlerunningteacher.com/wp-content/uploads/2012/03/McDonalds-Logo.jpg);
+  background-size: cover;
+  position: relative;
+  //margin-top: -($pageTopDecrease);
+  height: 200%;
+  top: 100%;
+}
